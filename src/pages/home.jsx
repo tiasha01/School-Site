@@ -3,6 +3,7 @@ import { motion } from "framer-motion";
 import Marquee from "react-fast-marquee";
 import ShowcaseCard from "../components/showcaseCard"
 import { Menu, X, ArrowUp } from "lucide-react";
+import { useNavigate } from "react-router-dom";
 
 import schoolLogo from "../assets/images/schoolLogo.png";
 import banner1 from "../assets/images/schoolBanner.jpg";
@@ -17,6 +18,7 @@ import emblem6 from "../assets/images/logo6.jpeg";
 
 function Home(){
 
+    const navigate = useNavigate();
     const [bannerIndex, setBannerIndex] = useState(0);
     const [menuOpen, setMenuOpen] = useState(false);
     const [topButtonVisible, setTopButtonVisible] = useState(false);
@@ -77,10 +79,12 @@ function Home(){
                         <button className="text-gray-700 text-lg hover:bg-slate-200 p-2 rounded">
                             Contact Us
                         </button>
-                        <button className="bg-green-600 hover:bg-green-500 text-lg text-white p-1 rounded">
+                        <button className="bg-green-600 hover:bg-green-500 text-lg text-white p-1 rounded"
+                                onClick={() => {navigate("/admission")}}>
                             Admission
                         </button>
-                        <button className="bg-orange-600 hover:bg-orange-500 text-lg text-white p-1 rounded">
+                        <button className="bg-orange-600 hover:bg-orange-500 text-lg text-white p-1 rounded"
+                                onClick={() => {navigate("/login")}}>
                             Student Login
                         </button>
                     </div>

@@ -2,7 +2,7 @@ import { useNavigate } from "react-router-dom";
 import { useState } from "react";
 import Footer from "../components/footer";
 
-function AddmissionForm(){
+function AdmissionForm(){
 
     const navigate = useNavigate();
     const [formData, setFormData]= useState ({
@@ -293,7 +293,7 @@ function AddmissionForm(){
                         <div className="flex justify-between w-1/3 space-x-4 mt-4">
                             <button type="button" 
                                     className="bg-red-500 text-white py-2 px-4 rounded hover:bg-red-600"
-                                    onClick={() => navigate("/login")}
+                                    onClick={() => navigate("/")}
                                 >
                                 Back
                             </button>
@@ -320,4 +320,4 @@ function AddmissionForm(){
         </>
     );
 };
-export default AddmissionForm;
+export default AdmissionForm;

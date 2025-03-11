@@ -1,7 +1,7 @@
 /*
 author: tiasha
 */
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import loginPageBg from "../assets/images/loginPageBackground.jpg"
 import loginPage from "../assets/images/loginPage2.jpg"
 import { KeyIcon } from "@heroicons/react/24/solid";
@@ -76,20 +76,20 @@ function Login(){
                                         )}
                                     </button>
                                 </div>
-
-                            </form>
-                            <div className="flex flex-col justify-center items-center pt-5">
+                                <div className="flex flex-col justify-center items-center pt-5">
                                 <button type="submit" className="w-28 bg-green-500 text-white py-2 px-3 text-sm rounded hover:bg-green-600"> Login </button>
                                     <p className="text-gray-600 pt-5">For New Addmission &nbsp;
                                         <button
                                             className="text-purple-700 underline"
-                                            onClick={() => navigate("/")}
+                                            onClick={() => navigate("/admission")}
                                         >
                                             Click Here
                                         </button>
                                     </p>
                                     <p className="flex text-gray-600 pt-3">Forget Password?</p> 
                                 </div>
+                            </form>
+
                         </div>
                         {/*Right container*/}
                         <div className="w-1/2">
