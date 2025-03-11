@@ -1,8 +1,10 @@
+import { useNavigate } from "react-router-dom";
 import { useState } from "react";
-import Login from "./login";
+import Footer from "../components/footer";
 
 function AddmissionForm(){
-    
+
+    const navigate = useNavigate();
     const [formData, setFormData]= useState ({
         firstName: "",
         middleName: "",
@@ -291,6 +293,7 @@ function AddmissionForm(){
                         <div className="flex justify-between w-1/3 space-x-4 mt-4">
                             <button type="button" 
                                     className="bg-red-500 text-white py-2 px-4 rounded hover:bg-red-600"
+                                    onClick={() => navigate("/login")}
                                 >
                                 Back
                             </button>
@@ -301,11 +304,19 @@ function AddmissionForm(){
                             </button>
                         </div>
                         <p className="text-gray-600 mt-3">
-                            Already have an account? Login Now!</p>
+                            Already have an account? &nbsp;
+                            <button
+                                className="text-purple-700 underline"
+                                onClick={() => navigate("/login")}
+                            >
+                                Login Now!
+                            </button>
+                        </p>
                         </div>
                     </form>
                 </div>
             </div>
+            <Footer/>
         </>
     );
 };
